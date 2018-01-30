@@ -1,10 +1,12 @@
 <h1>Movies</h1>
 
-<ul>
-  <li>Apollo 13</li>
-  <li>Star Wars</li>
-  <li>Guardians of the Galaxy</li>
-  <li>The Martian</li>
-</ul>
+<div class="row">
+  <% Movie.all.each do |movie| %>
+  <!-- <img src="..." class="img-fluid" -->
+    <div class="col-sm-3">
+      <%= image_tag movie.poster_url, :class => "img-fluid"%>
+    </div>
+  <% end %>
+</div>
 
 <%= link_to "Add a Movie", "/movies/new" %>

@@ -3,6 +3,8 @@
 
 Movie
   title: text
+  year: integer
+  poster_url: text
 
 # Book
 #   title: text
